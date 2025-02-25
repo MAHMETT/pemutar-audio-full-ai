@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drama Music Player</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Aside untuk Kumpulan Tombol -->
+            <aside>
+                <div class="status-music">
+                    <p>
+                        <span id="music-status">No Play Music</span>
+                    </p>
+                </div>
+                <h3>Scene Backsound</h3>
+                <div class="button-group">
+                    <button
+                        class="music-btn"
+                        data-src="Backsound/Utama/Hopeful & Angelic (Free Music) - RESOLUTIONS by @ScottBuckley.mp3"
+                        data-additional="false"
+                        data-name="Scene 1"
+                    >
+                        Scene 1 - Hopeful & Angelic
+                    </button>
+                    <button
+                        class="music-btn"
+                        data-src="Backsound/Utama/Funny Quirky Comedy (Free Download Background Music).mp3"
+                        data-additional="false"
+                        data-name="Backsound Scene 2"
+                    >
+                        Scene 2 - Funny Quirky Comedy
+                    </button>
+                    <button
+                        class="music-btn"
+                        data-src="Backsound/Utama/Suspenseful Background Music - BRINK - Action Instrumental Intense Dramatic Film Movie Soundtrack.mp3"
+                        data-additional="false"
+                        data-name="Backsound Scene 3"
+                    >
+                        Scene 3 - Suspenseful
+                    </button>
+                    <button
+                        class="music-btn"
+                        data-src="Backsound/Utama/The Dark Night (Suspense Background Music  Suspenseful background music).mp3"
+                        data-additional="false"
+                        data-name="Backsound Scene 4"
+                    >
+                        Scene 4 - The Dark Night
+                    </button>
+                    <button
+                        class="music-btn"
+                        data-src="Backsound/Utama/Uplifting Instrumental Music  Positive - by AShamaluevMusic.mp3"
+                        data-additional="false"
+                        data-name="Backsound Scene 4"
+                    >
+                        Ending
+                    </button>
+                    <button
+                        class="music-btn"
+                        data-src="Backsound/Utama/Hopeful Happy Ending Music - Dawn of Life.mp3"
+                        data-additional="false"
+                        data-name="Backsound Scene 4"
+                    >
+                        Ending 2
+                    </button>
+                </div>
+                <h3>Sound Tambahan</h3>
+                <div class="button-group">
+                    <button
+                        class="music-btn small-btn"
+                        data-src="Backsound/Tambahan/Classic Alarm Clock - Sound Effect  ProSounds.mp3"
+                        data-additional="true"
+                        data-name="Sound Effect 1"
+                    >
+                        Sound 1 - Alarm
+                    </button>
+                    <button
+                        class="music-btn small-btn"
+                        data-src="Backsound/Tambahan/Noisy Classroom Sound Effect (Download Link).mp3"
+                        data-additional="true"
+                        data-name="Sound Effect 2"
+                    >
+                        Sound 2 - Keramaian
+                    </button>
+                    <button
+                        class="music-btn small-btn"
+                        data-src="Backsound/Tambahan/Heartbeat Sound Effect(No Copyright).mp3"
+                        data-additional="true"
+                        data-name="Sound Effect 3"
+                    >
+                        Sound 3 - Heartbeat
+                    </button>
+                    <button
+                        class="music-btn small-btn"
+                        data-src="Backsound/Tambahan/Soft Wind - Sound Effect.mp3"
+                        data-additional="true"
+                        data-name="Sound Effect 3"
+                    >
+                        Sound 3 - Angin Sepoi-sepoi
+                    </button>
+                </div>
+                <!-- Tombol Play/Stop -->
+                <div class="play-stop">
+                    <button id="stop-backsound-btn" class="music-btn stop-btn">
+                        ⏹️ Stop Backsound Scene
+                    </button>
+                    <button id="stop-additional-btn" class="music-btn stop-btn">
+                        ⏹️ Stop Backsound Tambahan
+                    </button>
+                    <button id="stop-all-btn" class="music-btn stop-btn">
+                        ⏹️ Stop All
+                    </button>
+                    <!-- <button id="fade-out-btn" class="music-btn fade-out-btn">
+                        🔉 Fade Out Music
+                    </button> -->
+                </div>
+                <!-- Tombol Navigasi Scene -->
+                <div class="scene-navigation">
+                    <h3>Navigasi Scene</h3>
+                    <button class="nav-btn" data-scene="scene1">
+                        Scene 1 -
+                    </button>
+                    <button class="nav-btn" data-scene="scene2">
+                        Scene 2 -
+                    </button>
+                    <button class="nav-btn" data-scene="scene3">
+                        Scene 3 -
+                    </button>
+                    <button class="nav-btn" data-scene="scene4">
+                        Scene 4 -
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main untuk Konten Drama -->
+            <main>
+                <h1 class="judul-drama">Kenakalan Remaja – Saatnya Berubah!</h1>
+                <div class="frame-scrollable">
+                    <!-- Scene 1 -->
+                    <div id="scene1" class="scene">
+                        <h2>Scene 1: Pembukaan dan Diskusi Kelas</h2>
+                        <p class="teks-dialog">
+                            *(Mulai backsound Hopeful & Angelic - RESOLUTIONS by
+                            @ScottBuckley.mp3)
+                        </p>
+                        <p class="narator">
+                            Hari itu, pagi terasa begitu melelahkan bagi
+                            beberapa siswa yang kebanyakan begadang.
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara: Alarm bangun tidur – Rekomendasi:
+                            "Classic Alarm Clock Sound.mp3"
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (mengeluh di tempat tidur): "Aduh, baru tidur
+                            jam 3 pagi… masih ngantuk… 5 menit lagi…"
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara alarm berbunyi lagi, lebih kencang,
+                            lalu fade out
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (terkejut): "Ya ampun! Udah jam 7 lewat! Gue
+                            telat!"
+                        </p>
+                        <p class="hint-sound">
+                            🎵 *(Stop backsound Hopeful & Angelic - RESOLUTIONS
+                            by @ScottBuckley.mp3, mulai backsound Noisy
+                            Classroom Sound Effect.mp3)
+                        </p>
+                        <p class="narator">
+                            Di kelas, suasana masih ramai dengan siswa yang
+                            mengobrol dan bercanda.
+                        </p>
+                        <p class="teks-dialog">
+                            Davin (berteriak dari depan kelas): "Oke
+                            teman-teman! Bisa tenang sebentar?!"
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara kelas masih sedikit gaduh, lalu
+                            pelan-pelan mereda
+                        </p>
+                        <p class="teks-dialog">
+                            Rara (menegur Dani): "Dani, kenapa tadi telat?"
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (garuk kepala): "Eh, ya… semalam main game
+                            sampai jam 3 pagi…"
+                        </p>
+                        <p class="teks-dialog">
+                            Sherli: "Wah, Dani! Aku juga suka main game, tapi
+                            aku tetap tidur cukup dan nggak sampai telat masuk
+                            sekolah."
+                        </p>
+                        <p class="teks-dialog">
+                            Dani: "Iya sih… kemarin aku hampir dapat surat
+                            peringatan gara-gara kebanyakan begadang."
+                        </p>
+                        <p class="hint-sound">
+                            🎵 *(Stop backsound Noisy Classroom Sound
+                            Effect.mp3, mulai backsound Funny Quirky Comedy.mp3
+                            setelah efek suara kelas mereda)
+                        </p>
+                    </div>
+
+                    <!-- Scene 2 -->
+                    <div id="scene2" class="scene">
+                        <h2>Scene 2: Kebiasaan Buruk di Sekolah</h2>
+                        <p class="teks-dialog">
+                            *(Mulai backsound Funny Quirky Comedy.mp3 setelah
+                            efek suara kelas mereda)
+                        </p>
+                        <p class="teks-dialog">
+                            Davin (berteriak dari depan kelas): "Oke
+                            teman-teman! Bisa tenang sebentar?!"
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara kelas masih sedikit gaduh, lalu
+                            pelan-pelan mereda
+                        </p>
+                        <p class="teks-dialog">
+                            Rara (menegur Dani): "Dani, kenapa tadi telat?"
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (garuk kepala, tertawa kecil): "Eh, ya… semalam
+                            main game sampai jam 3 pagi…"
+                        </p>
+                        <p class="teks-dialog">
+                            Sherli: "Wah, Dani! Aku juga suka main game, tapi
+                            aku tetap tidur cukup dan nggak sampai telat masuk
+                            sekolah."
+                        </p>
+                        <p class="teks-dialog">
+                            Dani: "Iya sih… kemarin aku hampir dapat surat
+                            peringatan gara-gara kebanyakan begadang."
+                        </p>
+                        <p class="teks-dialog">
+                            Davin (serius): "Kita harus mulai sadar kalau
+                            kebiasaan buruk ini bisa berdampak ke masa depan
+                            kita. Kalau terus-terusan begini, bisa-bisa nanti
+                            menyesal."
+                        </p>
+                        <p class="teks-dialog">
+                            Rara: "Betul! Sekarang, siapa yang pernah buang
+                            sampah sembarangan di sekolah?"
+                        </p>
+                        <p class="teks-dialog">
+                            Sherli (menatap Dani): "Dani, aku pernah lihat kamu
+                            buang bungkus makanan di lantai padahal tempat
+                            sampah ada di sebelahmu!"
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (tertawa kecil): "Hahaha… iya sih. Tapi kan ada
+                            petugas kebersihan, jadi mereka bisa bersihin."
+                        </p>
+                        <p class="teks-dialog">
+                            Aryo (wali kelas, menegur dengan tegas): "Dani,
+                            sekolah ini bukan hanya tanggung jawab petugas
+                            kebersihan. Kalau semua berpikir begitu, kita bisa
+                            jadi tempat sampah raksasa."
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (menghela napas, menunduk): "Iya, Pak. Mulai
+                            sekarang aku bakal lebih peduli soal kebersihan."
+                        </p>
+                        <p class="hint-sound">
+                            🎵 *(Stop backsound Funny Quirky Comedy.mp3, mulai
+                            backsound Suspenseful Background Music - BRINK.mp3)
+                        </p>
+                    </div>
+
+                    <!-- Scene 3 -->
+                    <div id="scene3" class="scene">
+                        <h2>Scene 3: Konsekuensi Kenakalan</h2>
+                        <p class="teks-dialog">
+                            *(Mulai backsound Suspenseful Background Music -
+                            BRINK.mp3)
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara: Pintu kelas dibuka dengan keras –
+                            Rekomendasi: "Door Slam Sound Effect.mp3"
+                        </p>
+                        <p class="narator">
+                            Pintu kelas terbuka, Pak Faris masuk dengan wajah
+                            serius, menggandeng seorang siswa.
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara kelas tiba-tiba hening setelah pintu
+                            terbuka
+                        </p>
+                        <p class="teks-dialog">
+                            Pak Faris (guru BK, serius): "Permisi, saya mau
+                            bicara sebentar. Tadi saya menemukan seseorang yang
+                            bolos pelajaran. Dani, bisa jelaskan kenapa kamu ada
+                            di luar saat jam pelajaran?"
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara detak jantung meningkat – Rekomendasi:
+                            "Heartbeat Sound Effect.mp3"
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (menunduk, terlihat gugup): "Eh… saya cuma…
+                            bosan di kelas, Pak. Jadi saya keluar sebentar."
+                        </p>
+                        <p class="teks-dialog">
+                            Davin: "Dani, bolos itu bukan solusi. Apa kamu sadar
+                            kalau ini bisa berpengaruh ke nilai dan masa
+                            depanmu?"
+                        </p>
+                        <p class="teks-dialog">
+                            Pak Faris: "Kamu bukan cuma merugikan diri sendiri,
+                            tapi juga menambah beban guru dan teman-temanmu."
+                        </p>
+                        <p class="hint-sound">
+                            🎵 *(Stop backsound Suspenseful Background Music -
+                            BRINK.mp3, mulai backsound The Dark Night (Suspense
+                            Background Music).mp3)
+                        </p>
+                    </div>
+
+                    <!-- Scene 4 -->
+                    <div id="scene4" class="scene">
+                        <h2>Scene 4: Kesadaran dan Perubahan</h2>
+                        <p class="teks-dialog">
+                            *(Mulai backsound The Dark Night (Suspense
+                            Background Music).mp3)
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (terlihat menyesal): "Saya… saya nggak berpikir
+                            sejauh itu sebelumnya…"
+                        </p>
+                        <p class="hint-sound">
+                            🎵 Efek suara: Suara angin sepoi-sepoi di luar kelas
+                            – Rekomendasi: "Soft Wind Ambience.mp3"
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (menghela napas): "Aku sadar sekarang, bolos
+                            atau malas-malasan cuma akan merugikan diriku
+                            sendiri."
+                        </p>
+                        <p class="teks-dialog">
+                            Sherli: "Kita masih bisa memperbaiki semuanya. Yang
+                            penting, kita sadar dulu kalau ini salah."
+                        </p>
+                        <p class="teks-dialog">
+                            Davin: "Betul, Dani. Yang penting ada niat buat
+                            berubah. Kita bisa bantu kalau kamu butuh dukungan."
+                        </p>
+                        <p class="teks-dialog">
+                            Dani (tersenyum kecil): "Oke… aku bakal berusaha
+                            berubah. Aku nggak mau nyia-nyiain kesempatan ini."
+                        </p>
+                        <p class="teks-dialog">
+                            Pak Faris (tersenyum): "Itu yang saya ingin dengar.
+                            Ingat, kalian masih punya banyak waktu untuk menjadi
+                            lebih baik. Jangan sia-siakan masa remaja kalian!"
+                        </p>
+                        <p class="hint-sound">
+                            🎵 *(Stop backsound The Dark Night (Suspense
+                            Background Music).mp3, mulai backsound Hopeful Happy
+                            Ending Music - Dawn of Life.mp3)
+                        </p>
+                        <p class="narator">
+                            Semua siswa di kelas tersenyum, merasa ada harapan
+                            baru dalam diri mereka. Diskusi itu memberi mereka
+                            pelajaran berharga: setiap orang bisa berubah ke
+                            arah yang lebih baik.
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
