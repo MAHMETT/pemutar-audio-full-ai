@@ -1,6 +1,20 @@
 let currentAudio = null; // Untuk menyimpan backsound scene
 let currentAdditionalAudio = null; // Untuk menyimpan backsound tambahan
 
+// Fungsi untuk memperbarui status musik
+function updateMusicStatus(status) {
+    document.getElementById('music-status').textContent = status; // Update status musik
+}
+
+// Fungsi untuk menghentikan audio yang diputar
+function stopAudio(audio, statusText) {
+    if (audio) {
+        audio.pause(); // Hentikan pemutaran
+        audio.currentTime = 0; // Reset waktu pemutaran
+        updateMusicStatus(statusText); // Update status
+    }
+}
+
 // Fungsi untuk memutar musik
 function playMusic(src, name, isAdditional = false) {
     if (isAdditional) {
@@ -13,6 +27,7 @@ function playMusic(src, name, isAdditional = false) {
         currentAdditionalAudio.play().catch((error) => {
             console.error('Gagal memutar backsound tambahan:', error);
         });
+        updateMusicStatus(`Play: ${name} (Additional)`); // Update status
     } else {
         // Jika ini adalah backsound scene
         if (currentAudio) {
@@ -23,49 +38,31 @@ function playMusic(src, name, isAdditional = false) {
         currentAudio.play().catch((error) => {
             console.error('Gagal memutar backsound scene:', error);
         });
+        updateMusicStatus(`Play: ${name}`); // Update status
     }
-    document.getElementById('music-status').textContent = `Play: ${name}`; // Update status
 }
 
 // Fungsi untuk menghentikan backsound scene
 function stopBacksound() {
-    if (currentAudio) {
-        currentAudio.pause(); // Hentikan pemutaran
-        currentAudio.currentTime = 0; // Reset waktu pemutaran
-        document.getElementById('music-status').textContent =
-            'Backsound Scene Stopped'; // Update status
-    } else {
-        console.log('Tidak ada backsound scene yang sedang diputar.');
-    }
+    stopAudio(currentAudio, 'Backsound Scene Stopped');
 }
 
 // Fungsi untuk menghentikan backsound tambahan
 function stopAdditional() {
-    if (currentAdditionalAudio) {
-        currentAdditionalAudio.pause(); // Hentikan pemutaran
-        currentAdditionalAudio.currentTime = 0; // Reset waktu pemutaran
-        document.getElementById('music-status').textContent =
-            'Backsound Tambahan Stopped'; // Update status
-    } else {
-        console.log('Tidak ada backsound tambahan yang sedang diputar.');
-    }
+    stopAudio(currentAdditionalAudio, 'Backsound Tambahan Stopped');
 }
 
 // Fungsi untuk menghentikan semua audio
 function stopAll() {
-    if (currentAudio || currentAdditionalAudio) {
-        if (currentAudio) {
-            currentAudio.pause(); // Hentikan backsound scene
-            currentAudio.currentTime = 0; // Reset waktu pemutaran
-        }
-        if (currentAdditionalAudio) {
-            currentAdditionalAudio.pause(); // Hentikan backsound tambahan
-            currentAdditionalAudio.currentTime = 0; // Reset waktu pemutaran
-        }
-        document.getElementById('music-status').textContent =
-            'All Music Stopped'; // Update status
-    } else {
+    if (currentAudio) {
+        stopAudio(currentAudio, 'All Music Stopped'); // Hentikan backsound scene
+    }
+    if (currentAdditionalAudio) {
+        stopAudio(currentAdditionalAudio, 'All Music Stopped'); // Hentikan backsound tambahan
+    }
+    if (!currentAudio && !currentAdditionalAudio) {
         console.log('Tidak ada audio yang sedang diputar.');
+        updateMusicStatus('No Music Playing'); // Status jika tidak ada musik yang diputar
     }
 }
 
