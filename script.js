@@ -84,3 +84,22 @@ document
     .getElementById('stop-additional-btn')
     .addEventListener('click', stopAdditional);
 document.getElementById('stop-all-btn').addEventListener('click', stopAll);
+
+// Fungsi untuk mengatur navigasi scene
+function navigateToScene(sceneId) {
+    // Scroll ke scene yang dipilih
+    const sceneElement = document.getElementById(sceneId);
+    if (sceneElement) {
+        sceneElement.scrollIntoView({ behavior: 'smooth' }); // Menggulir ke scene yang dipilih
+    } else {
+        console.log('Scene tidak ditemukan: ' + sceneId);
+    }
+}
+
+// Event listener untuk tombol navigasi scene
+document.querySelectorAll('.nav-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+        const sceneId = button.getAttribute('data-scene'); // Ambil ID scene
+        navigateToScene(sceneId); // Navigasi ke scene tersebut
+    });
+});
