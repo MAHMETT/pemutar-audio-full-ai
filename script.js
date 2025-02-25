@@ -59,10 +59,6 @@ document.querySelectorAll('.music-btn').forEach((button) => {
 });
 
 // Event listener untuk tombol stop
-document
-    .getElementById('stop-backsound-btn')
-    .addEventListener('click', stopBacksound);
-document
-    .getElementById('stop-additional-btn')
-    .addEventListener('click', stopAdditional);
+document.getElementById('stop-backsound-btn').addEventListener('click', stopBacksound);
+document.getElementById('stop-additional-btn').addEventListener('click', stopAdditional);
 document.getElementById('stop-all-btn').addEventListener('click', stopAll);
