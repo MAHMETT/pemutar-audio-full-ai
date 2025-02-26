@@ -1,12 +1,12 @@
 let currentAudio = null; // Untuk menyimpan backsound scene
 let currentAdditionalAudio = null; // Untuk menyimpan backsound tambahan
-let soundEffects = {
-    '1': 'Backsound/Tambahan/Classic Alarm Clock - Sound Effect  ProSounds.mp3',
-    '2': 'Backsound/Tambahan/Noisy Classroom Sound Effect (Download Link).mp3',
-    '3': 'Backsound/Tambahan/Door Slam Sound Effect.mp3',
-    '4': 'Backsound/Tambahan/Heartbeat Sound Effect(No Copyright).mp3',
-    '5': 'Backsound/Tambahan/Soft Wind - Sound Effect.mp3',
-};
+// let soundEffects = {
+//     1: 'Backsound/Tambahan/Classic Alarm Clock - Sound Effect  ProSounds.mp3',
+//     2: 'Backsound/Tambahan/Noisy Classroom Sound Effect (Download Link).mp3',
+//     3: 'Backsound/Tambahan/Door Slam Sound Effect.mp3',
+//     4: 'Backsound/Tambahan/Heartbeat Sound Effect(No Copyright).mp3',
+//     5: 'Backsound/Tambahan/Soft Wind - Sound Effect.mp3',
+// };
 
 // Fungsi untuk memperbarui status musik
 function updateMusicStatus(status) {
@@ -112,23 +112,15 @@ document.querySelectorAll('.nav-btn').forEach((button) => {
 });
 
 // Menambahkan event listener untuk mendeteksi ketika angka ditekan
-document.addEventListener('keydown', (event) => {
-    if (event.key >= '1' && event.key <= '5') {
-        // Cek jika key yang ditekan adalah angka antara 1-5
-        const soundEffect = soundEffects[event.key];
-        if (soundEffect) {
-            const audio = new Audio(soundEffect); // Membuat objek audio baru
-            audio.play().catch((error) => {
-                console.error('Gagal memutar sound effect:', error);
-            });
-        }
-    }
-
-    // Menambahkan event listener untuk mendeteksi ketika tombol Delete ditekan
-    if (event.key === 'Delete') {
-        const audio = new Audio('Backsound/Tambahan/no_sound.mp3'); // Sound effect untuk delete
-        audio.play().catch((error) => {
-            console.error('Gagal memutar sound no_sound:', error);
-        });
-    }
-});
+// document.addEventListener('keydown', (event) => {
+//     if (event.key >= '1' && event.key <= '5') {
+//         // Cek jika key yang ditekan adalah angka antara 1-5
+//         const soundEffect = soundEffects[event.key];
+//         if (soundEffect) {
+//             const audio = new Audio(soundEffect); // Membuat objek audio baru
+//             audio.play().catch((error) => {
+//                 console.error('Gagal memutar sound effect:', error);
+//             });
+//         }
+//     }
+// });
